@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Image Mapper</title>
+    <link rel="stylesheet" href="site.css" >
+    <script type="text/javascript" src="image-mapper.js"></script>
+</head>
+
+<body>
+  <div class="fileUploader">
+   <span>Select a file to upload:</span> <input type='file' accept='image/*' onchange='openFile(event)'><br>
+  </div>
+    <div id="fildetails">
+
+    </div>
+    <div id="imageMapper">
+        <img id='output' onclick="clickHotspotImage(event)">
+    </div>
+    <div class="tooltipUserInput hide" id="tooltipUserInput">
+        
+        <input type="text" class="textBox" id="txtpntDesc" onchange="" placeholder="Enter description" />
+        <br>
+        <button onclick="Save(event)" id="btnSave">Save</button><button id="btnClose" onclick="Close(event)">Cancel</button>
+    </div>
+
+    <div class="tooltipMeasure hide" id='tooltipMeasure'>
+        <span id="measure"></span>
+    </div>
+
+    
+    <div id="tblData">
+        
+
+    </div>
+
+    <script>
+    
+
+    </script>
+</body>
+
+</html>
