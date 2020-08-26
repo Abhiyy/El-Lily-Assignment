@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-    <title>Stock Price Chart</title>
+    <title>Image Mapper</title>
+    <link rel="stylesheet" href="site.css" >
+    <script type="text/javascript" src="image-mapper.js"></script>
+</head>
+
+<body>
+  <div class="fileUploader">
+   <span>Select a file to upload:</span> <input type='file' accept='image/*' onchange='openFile(event)'><br>
+  </div>
+    <div id="fildetails">
+
+    </div>
+    <div id="imageMapper">
+        <img id='output' onclick="clickHotspotImage(event)">
+    </div>
+    <div class="tooltipUserInput hide" id="tooltipUserInput">
+        
+        <input type="text" class="textBox" id="txtpntDesc" onchange="" placeholder="Enter description" />
+        <br>
+        <button onclick="Save(event)" id="btnSave">Save</button><button id="btnClose" onclick="Close(event)">Cancel</button>
+    </div>
+
+    <div class="tooltipMeasure hide" id='tooltipMeasure'>
+        <span id="measure"></span>
+    </div>
+
     
-    <script src="stock-tracker.js" type="text/javascript"></script>
-    <script type="text/javascript">
-     let chartData =[];
-        getRequest(
-            'https://financialmodelingprep.com/api/v3/historical-chart/1hour/AAPL?apikey=demo',
-             drawOutput
-                 );
-           
-       
-                           function drawOutput(responseText) {
+    <div id="tblData">
+        
 
-                            chartData = JSON.parse(responseText).slice(0,9);
-                           
+    </div>
 
-                            let graphdata = chartData.map((r)=>{
-                                return {
-                                    x: new Date(r.date).toTimeString().slice(0,8),
-                                    y: Math.round(r.close)
-                                }
-                            })
-
-                            var dataDef = { title: "Apple Stock price Chart",
-                            xLabel: 'Every Hour', 
-                            yLabel: 'Price',
-                            labelFont: '19pt Arial', 
-                            dataPointFont: '10pt Arial',
-                            renderTypes: [LineChart.renderType.lines, LineChart.renderType.points],
-                            dataPoints: graphdata
-                           };
-                           
-                           LineChart.render('canvas', dataDef)
-
-                            }   
+    <script>
+    
 
     </script>
-</head>
-<body style="margin-left:50px;margin-top:50px;">
-    <canvas id="canvas" width="800" height="600"></canvas>
 </body>
+
 </html>

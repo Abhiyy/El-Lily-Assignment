@@ -6,3 +6,90 @@ body{
 }
 
 
+.fileUploader span{
+    font-weight: bold;
+}
+
+.textBox{
+    width:150px;
+    padding: 5px;
+    border:1px solid #555555;
+    border-radius: 5px;
+}
+
+#fildetails{
+    background-image: linear-gradient(to right, #efefee, #dddddd );
+    
+    border:1px solid #555555;
+    width:350px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.tooltipUserInput {
+    position: absolute;
+    background-color: #efeefe;
+    border: 1px solid #666666;
+    padding: 20px;
+}
+
+.tooltipMeasure {
+    position: absolute;
+    background-color: #efeefe;
+    border: 1px solid #666666;
+    padding: 10px;
+    opacity: 0.8;
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.circle {
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+#btnSave{
+    padding: 5px;
+    color:#fff;
+    background-color: green;
+    border:1px solid green;
+    margin: 2px 2px 0 0;
+    border-radius: 2px;
+}
+#btnClose{
+    padding: 5px;
+    color:#fff;
+    background-color:peru;
+    border:1px solid peru;
+    margin-top:2px;
+    border-radius: 2px;
+}
+
+#tblData{
+    min-height: 200px;
+    overflow-y: scroll;
+
+}
+
+.table{
+    border-collapse: collapse;
+    border:1px solid #666666;
+    background-image: linear-gradient(to right, #efefee, #dddddd );
+}
+.table th, td{
+    padding: 5px;
+    border:1px solid #666666;
+}

@@ -1,48 +1,90 @@
+
 body{
     font-family: Helvetica Neue, Arial, sans-serif;
   font-size: 14px;
   color: #444;
     padding: 5px;
+   
 }
 
-
-.fileUploader span{
-    font-weight: bold;
+h1 {
+  margin-bottom:0;
+  text-align:center;
+  margin-bottom: 100px;
 }
 
-.textBox{
-    width:150px;
-    padding: 5px;
-    border:1px solid #555555;
-    border-radius: 5px;
+#wrapper {
+  width:650px;
+  padding:1em;
+  margin:2em auto;
+  background:white;
+  box-shadow:0 5px 10px rgba(0,0,0,.1);
 }
 
-#fildetails{
-    background-image: linear-gradient(to right, #efefee, #dddddd );
+.explanation {
+  margin-bottom:3em;
+  display: inline-block;
+}
+
+.chart {
+  width:600px;
+  padding-left:50px;
+  height:300px;
+  margin:auto;
+  position: relative;
+  display:flex;
+  justify-content: space-between;
+  border-bottom:1px solid lighten(#4183d7,35%);
+  
     
-    border:1px solid #555555;
-    width:350px;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    display: none;
-}
+  }
 
-.tooltipUserInput {
+  .chart .chartMeasurements {
     position: absolute;
-    background-color: #efeefe;
-    border: 1px solid #666666;
-    padding: 20px;
-}
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+    text-align:left;
+    z-index:1;
+  }
+    .chart .chartMeasurements .chartMeasurement {
+      width:100%;
+      flex-grow:1;
+      
+      border-top:1px solid lighten(#4183d7,35%);
+      
+     
+  
+    }
+  
+    .chart svg {
+    position: relative;
+    z-index:2;
+    
+    
+  }
 
-.tooltipMeasure {
+  .chart svg path {
+    box-shadow:inset 2px 0 red;
+    /* fill:rgba(#4183d7,.6); */
+    fill:none;
+    stroke-width: .5;
+    stroke: #4183d7;
+  }
+
+  .tooltipMeasure {
     position: absolute;
     background-color: #efeefe;
     border: 1px solid #666666;
     padding: 10px;
-    opacity: 0.8;
+    opacity: 0.9;
     border-radius: 5%;
     padding: 10px;
+    font-size:10px;
 }
 
 .hide {
@@ -61,35 +103,6 @@ body{
     position: absolute;
     cursor: pointer;
 }
-#btnSave{
-    padding: 5px;
-    color:#fff;
-    background-color: green;
-    border:1px solid green;
-    margin: 2px 2px 0 0;
-    border-radius: 2px;
-}
-#btnClose{
-    padding: 5px;
-    color:#fff;
-    background-color:peru;
-    border:1px solid peru;
-    margin-top:2px;
-    border-radius: 2px;
-}
+  
 
-#tblData{
-    min-height: 200px;
-    overflow-y: scroll;
 
-}
-
-.table{
-    border-collapse: collapse;
-    border:1px solid #666666;
-    background-image: linear-gradient(to right, #efefee, #dddddd );
-}
-.table th, td{
-    padding: 5px;
-    border:1px solid #666666;
-}
